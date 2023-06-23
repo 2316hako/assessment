@@ -1,3 +1,45 @@
-// Place all the styles related to the items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, main, footer {
+  padding: 20px;
+}
+
+/* ヘッダーのスタイル */
+header {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+#userActions a {
+  margin-left: 10px;
+}
+
+/* 新規登録とログインのスタイル */
+#userActions {
+  display: flex;
+  align-items: center;
+}
+
+#registerLink,
+#loginLink {
+  padding: 5px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+}
+
+#registerLink:hover,
+#loginLink:hover {
+  background-color: #45a049;
+}
