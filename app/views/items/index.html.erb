@@ -7,15 +7,20 @@
 <body>
   <header>
     <h1>自社出品機能</h1>
-    <div id="userActions">
-      <a href="#" id="registerLink">新規登録</a>
-      <a href="#" id="loginLink">ログイン</a>
+    <div class="userActions">
+      <a href="#" class="registerLink">新規登録</a>
+      <a href="#" class="loginLink">ログイン</a>
     </div>
   </header>
 
   <main>
+    <div class="itemActions">
+      <div class="item_addition">商品追加</div>
+      <div class="item_detail">明細</div>
+      <div class="item_total">合計</div>
+    </div>
     <h2>商品検索</h2>
-    <form id="searchForm">
+    <form class="searchForm">
       <input type="text" id="searchInput" placeholder="商品名を入力">
       <button type="submit">検索</button>
     </form>
@@ -23,20 +28,9 @@
     <div id="searchResults">
       <!-- 検索結果の表示領域 -->
     </div>
-
-    <h2>商品追加</h2>
-    <form id="addItemForm">
-      <input type="text" id="itemName" placeholder="商品名">
-      <input type="text" id="itemCondition" placeholder="状態">
-      <input type="text" id="itemPrice" placeholder="相場">
-      <input type="text" id="itemRatio" placeholder="割合">
-      <input type="text" id="itemPresentationPrice" placeholder="提示額">
-      <button type="submit">追加</button>
-    </form>
   </main>
 
   <footer>
-    <p>&copy; 2023 自社出品機能</p>
   </footer>
 </body>
 </html>

@@ -21,25 +21,41 @@ header h1 {
   margin: 0;
 }
 
-#userActions a {
+.userActions a {
   margin-left: 10px;
 }
 
 /* 新規登録とログインのスタイル */
-#userActions {
+.userActions {
   display: flex;
   align-items: center;
 }
 
-#registerLink,
-#loginLink {
+.registerLink,
+.loginLink {
   padding: 5px;
   background-color: #4CAF50;
   color: white;
   text-decoration: none;
 }
 
-#registerLink:hover,
-#loginLink:hover {
+.registerLink:hover,
+.loginLink:hover {
   background-color: #45a049;
+}
+
+/* 商品追加、明細、合計ボタンのスタイル */
+.itemActions {
+  display: flex;
+  align-items: center;
+}
+
+.item_addition,
+.item_detail,
+.item_total {
+  padding: 5px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  margin-left: 5px;
 }
