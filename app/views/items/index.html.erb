@@ -9,6 +9,7 @@
     <h1>自社出品機能</h1>
     <div class="userActions">
       <% if user_signed_in? %>
+        <%= link_to "商品登録", new_item_path, class: "item_register" %>
         <%= link_to current_user.name, "#", class: "registerLink" %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "loginLink" %>
       <% else %>
