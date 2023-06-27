@@ -2,19 +2,28 @@
   <div class="items-sell-main">
     <%= form_with(model: @item, local: true) do |f| %>
     <%# 商品画像 %>
-        <div class="img-upload">
-          <div class="weight-bold-text">
-            商品画像
-            <span class="indispensable">必須</span>
-          </div>
-          <div class="click-upload">
-            <p>
-              クリックしてファイルをアップロード
-            </p>
-            <%= f.file_field :image, id:"item-image" %>
-          </div>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          商品画像
+          <span class="indispensable">必須</span>
         </div>
+        <div class="click-upload">
+          <p>
+             クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"item-image" %>
+        </div>
+      </div>
     <%# /商品画像 %>
+    <%# 商品名 %>
+      <div class="new-items">
+        <div class="weight-bold-text">
+          商品名
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      </div>
+    <%# /商品名 %>
     <% end %>
   </div>
 </div>
