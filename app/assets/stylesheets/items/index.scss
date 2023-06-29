@@ -25,23 +25,19 @@ header h1 {
   margin-left: 10px;
 }
 
-/* 新規登録とログインのスタイル */
+/* 新規登録,ログイン,商品登録のスタイル */
 .userActions {
   display: flex;
   align-items: center;
 }
 
+.item_register,
 .registerLink,
 .loginLink {
   padding: 5px;
   background-color: #4CAF50;
   color: white;
   text-decoration: none;
-}
-
-.registerLink:hover,
-.loginLink:hover {
-  background-color: #45a049;
 }
 
 /* 商品追加、明細、合計ボタンのスタイル */
