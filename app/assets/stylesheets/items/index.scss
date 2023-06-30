@@ -55,3 +55,27 @@ header h1 {
   text-decoration: none;
   margin-left: 5px;
 }
+
+/* 商品検索機能、画像、名前、相場、状態のスタイル */
+.searchResults{
+  margin-top: 10px;
+}
+
+.itemList {
+  padding: 5px;
+  background-color: #4CAF50;
+  display: inline-block;
+  margin-top: 10px;
+  width: fit-content;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}

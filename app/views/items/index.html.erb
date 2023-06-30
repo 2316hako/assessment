@@ -20,20 +20,42 @@
   </header>
 
   <main>
-    <div class="itemActions">
-      <div class="item_addition">商品追加</div>
-      <div class="item_detail">明細</div>
-      <div class="item_total">合計</div>
-    </div>
-    <h2>商品検索</h2>
-    <form class="searchForm">
-      <input type="text" id="searchInput" placeholder="商品名を入力">
-      <button type="submit">検索</button>
-    </form>
+    <% if user_signed_in? %>
+      <div class="itemActions">
+        <div class="item_addition">商品追加</div>
+        <div class="item_detail">明細</div>
+        <div class="item_total">合計</div>
+      </div>
+    <% end %>
 
-    <div id="searchResults">
-      <!-- 検索結果の表示領域 -->
+    <%# 商品検索 %>
+    <div class="searchResults">  
+      <%= search_form_for @search do |f| %>
+        <%= f.search_field :name_cont_any, placeholder: "商品名" %>
+        <%= f.submit "検索" %>
+       <% end %>
     </div>
+
+    
+    <% @items.each do |item| %>
+      <div class="itemList">
+        <div class="itemImg">
+          <%= image_tag item.image, class: "item-img" %>
+        </div>
+        <div class="img">
+          <div class="imgCondition">
+            <%= item.condition.name %>
+          </div>
+          <div class="imgName">
+            <%= item.name %>
+          </div>
+          <div class="imgPrce">
+            <%= item.price %>円
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <%# /商品検索 %>
   </main>
 
   <footer>
