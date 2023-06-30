@@ -62,5 +62,20 @@ header h1 {
 }
 
 .itemList {
+  padding: 5px;
+  background-color: #4CAF50;
+  display: inline-block;
   margin-top: 10px;
+  width: fit-content;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.img {
+  display: flex;
+  flex-direction: column;
+  color: white;
 }

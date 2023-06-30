@@ -20,12 +20,13 @@
   </header>
 
   <main>
-    <div class="itemActions">
-      <div class="item_addition">商品追加</div>
-      <div class="item_detail">明細</div>
-      <div class="item_total">合計</div>
-    </div>
-    
+    <% if user_signed_in? %>
+      <div class="itemActions">
+        <div class="item_addition">商品追加</div>
+        <div class="item_detail">明細</div>
+        <div class="item_total">合計</div>
+      </div>
+    <% end %>
 
     <%# 商品検索 %>
     <div class="searchResults">  
@@ -35,23 +36,25 @@
        <% end %>
     </div>
 
-    <div class="itemList">
-      <% @items.each do |item| %>
-        <div class="item">
-          <div class="itemImage">
-            <%= image_tag item.image, class: "item-img" %>
-          </div>
-          <div class="ImageName">
-            <%= item.name %>
-          </div>
-          <div class="ImagePrce">
-            <%= item.price %>円
-          </div>
-          <div class="itemCondition">
+    
+    <% @items.each do |item| %>
+      <div class="itemList">
+        <div class="itemImg">
+          <%= image_tag item.image, class: "item-img" %>
+        </div>
+        <div class="img">
+          <div class="imgCondition">
             <%= item.condition.name %>
           </div>
+          <div class="imgName">
+            <%= item.name %>
+          </div>
+          <div class="imgPrce">
+            <%= item.price %>円
+          </div>
         </div>
-      <% end %>
+      </div>
+    <% end %>
     <%# /商品検索 %>
   </main>
 
